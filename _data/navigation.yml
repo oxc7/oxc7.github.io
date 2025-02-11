@@ -2,12 +2,14 @@
 main:
   - title: "Patents"
     url: /patents/
+  - title: "Resume/CV"
+    url: /resources/resume.pdf
+
   - title: "Projects"
     url: /projects/
   - title: "Blog"
     url: /blog/
-  - title: "Resume/CV"
-    url: /resume/
+
 
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
