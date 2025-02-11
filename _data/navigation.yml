@@ -3,7 +3,8 @@ main:
   - title: "Patents"
     url: /patents/
   - title: "Resume/CV"
-    url: /resources/resume.pdf
+    # url: /resources/resume.pdf
+    url: /resume/
 
   - title: "Projects"
     url: /projects/
