@@ -3,11 +3,12 @@ main:
   - title: "Presentations"
     url: /presentations/
   - title: "Projects"
-  url: /projects/
+    url: /projects/
   - title: "Blog"
-  url: /blog/
+    url: /blog/
   - title: "Resume/CV"
-  url: /resume/
+    url: /resume/
+
   # - title: "About"
   #   url: https://mmistakes.github.io/minimal-mistakes/about/
   # - title: "Sample Posts"
