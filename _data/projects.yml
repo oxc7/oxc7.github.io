@@ -1,7 +1,7 @@
 - title: "Patent Infringement Checker"
   description: "A web-based tool for evaluating potential patent infringement risks."
   image: "/resources/patent_infringement.png"
-  link: "/projects/patent-checker"
+  # link: "/projects/patent-checker"
   details: |
     - **Infringement Analysis**: Identifies products potentially infringing on a patent.
     - **Comprehensive Reports**: Provides likelihood assessment, relevant claims, and key features.
@@ -11,7 +11,7 @@
 - title: "Another Project"
   description: "A second project for testing."
   image: "/resources/another_project.png"
-  link: "/projects/another-project"
+  # link: "/projects/another-project"
   details: |
     - **Feature 1**: Explanation.
     - **Feature 2**: Explanation.
