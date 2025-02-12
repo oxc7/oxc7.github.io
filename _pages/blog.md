@@ -1,72 +1,30 @@
 ---
+layout: default
+title: "Blog"
 permalink: /blog/
-title: "The Importance of Penetration Testing for AI Products"
-date: 2025-02-12
-author: Chen Yow Ru
 ---
 
-## Penetration Testing for AI Products: A Crucial Step in Security
+# Recent Posts
 
-As AI-powered applications continue to evolve, ensuring their security has become a top priority. Penetration testing (pen test) plays a crucial role in identifying vulnerabilities that could be exploited by malicious actors. Recently, I have been conducting penetration testing for our company's internal AI product to ensure its robustness against potential threats.
+{% for post in site.posts %}
+  <div class="post-preview">
+    <a href="{{ post.url | relative_url }}">
+      <h2>{{ post.title }}</h2>
+      <p>{{ post.excerpt }}</p>
+    </a>
+    <p class="post-meta">Posted by {{ post.author }} on {{ post.date | date: "%B %d, %Y" }}</p>
+  </div>
+  <hr>
+{% endfor %}
 
-### Key Threats: OWASP Top 10 for AI Systems
-
-The **OWASP Top 10** provides a list of the most critical security risks for web applications, many of which also apply to AI products. Below are some key threats and how they relate to AI security:
-
-#### 1. Injection Attacks
-Malicious input can manipulate AI models or databases. A common example is **SQL Injection** in API endpoints:
-
-```python
-import sqlite3
-
-def get_user_data(user_id):
-    conn = sqlite3.connect("database.db")
-    cursor = conn.cursor()
-    query = f"SELECT * FROM users WHERE id = {user_id}"  # Vulnerable to SQL Injection
-    cursor.execute(query)
-    return cursor.fetchall()
-```
-**Fix:** Use parameterized queries to prevent injection attacks:
-
-```python
-query = "SELECT * FROM users WHERE id = ?"
-cursor.execute(query, (user_id,))
-```
-
-#### 2. Insecure Model APIs
-Attackers can exploit model APIs by sending adversarial inputs or manipulating requests:
-
-```python
-from flask import Flask, request, jsonify
-import torch
-import model
-
-app = Flask(__name__)
-
-@app.route("/predict", methods=["POST"])
-def predict():
-    data = request.json["input"]
-    result = model.predict(torch.tensor(data))  # No validation
-    return jsonify({"prediction": result})
-```
-
-**Fix:** Implement strict input validation and authentication mechanisms:
-
-```python
-if not isinstance(data, list) or any(not isinstance(i, (int, float)) for i in data):
-    return jsonify({"error": "Invalid input"}), 400
-```
-
-#### 3. Data Leakage
-AI models trained on sensitive data may inadvertently expose private information. Attackers can use **Model Inversion** techniques to extract training data:
-
-```python
-# Example of an overfitted model leaking user data
-print(model.predict([user_sensitive_input]))
-```
-
-**Fix:** Apply differential privacy techniques and avoid overfitting to specific data patterns.
-
-### Conclusion
-
-Penetration testing is essential for securing AI products against modern threats. By addressing vulnerabilities like **injection attacks, insecure model APIs, and data leakage**, we can build AI systems that are resilient to cyber threats. Continuous security assessment and adherence to best practices will ensure AI remains a trustworthy technology.
+<div class="pagination">
+  {% if paginator.previous_page %}
+    <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
+  {% endif %}
+  
+  <span class="page-number">Page {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  
+  {% if paginator.next_page %}
+    <a href="{{ paginator.next_page_path }}" class="next">Next</a>
+  {% endif %}
+</div>
