@@ -5,7 +5,6 @@ main:
   - title: "Resume/CV"
     # url: /resources/resume.pdf
     url: /resume/
-
   - title: "Projects"
     url: /projects/
   - title: "Blog"
