@@ -36,5 +36,5 @@ docker run -p 5001:5001 patent_infringement_checker
 Access the tool at [http://localhost:5001](http://localhost:5001).
 
 ## Screenshot
-![App Screenshot](resources/patent_infringement.png)
+![App Screenshot](/resources/patent_infringement.png)
 
