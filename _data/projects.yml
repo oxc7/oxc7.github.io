@@ -8,10 +8,10 @@
     - **User-Friendly Interface**: Simple web-based tool for analysis and review.
     - **Report Management**: Save and access past analyses.
 
-- title: "Another Project"
-  description: "A second project for testing."
-  image: "/resources/another_project.png"
-  # link: "/projects/another-project"
-  details: |
-    - **Feature 1**: Explanation.
-    - **Feature 2**: Explanation.
+# - title: "Another Project"
+#   description: "A second project for testing."
+#   image: "/resources/another_project.png"
+#   # link: "/projects/another-project"
+#   details: |
+#     - **Feature 1**: Explanation.
+#     - **Feature 2**: Explanation.
