@@ -17,7 +17,7 @@ permalink: /blog/
   <hr>
 {% endfor %}
 
-<div class="pagination">
+<!-- <div class="pagination">
   {% if paginator.previous_page %}
     <a href="{{ paginator.previous_page_path }}" class="previous">Previous</a>
   {% endif %}
@@ -27,4 +27,4 @@ permalink: /blog/
   {% if paginator.next_page %}
     <a href="{{ paginator.next_page_path }}" class="next">Next</a>
   {% endif %}
-</div>
+</div> -->
