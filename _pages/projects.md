@@ -1,12 +1,13 @@
 ---
-layout: page
 title: "Projects"
+layout: single
 permalink: /projects/
 ---
 
 {% for project in site.data.projects %}
-## [{{ project.title }}]({{ project.link }})
-![Project Image]({{ project.image }})
+## {{ project.title }}
+
+<img src="{{ project.image }}" alt="{{ project.title }}" style="max-width: 500px; height: auto;">
 
 {{ project.description }}
 
