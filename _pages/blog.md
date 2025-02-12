@@ -3,7 +3,7 @@ title: "Blog"
 permalink: /blog/
 ---
 
-# Recent Posts
+## Recent Posts
 
 {% for post in site.posts %}
   <div class="post-preview">
