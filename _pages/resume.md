@@ -1,4 +1,4 @@
----
+<!-- ---
 title: "Resume"
 permalink: /resume/
 ---
@@ -11,4 +11,4 @@ permalink: /resume/
     window.location.href = "https://drive.google.com/file/d/1CXpHeWSoegVmSt3m7LITajuKOpvhfb2J/view?usp=sharing";
   </script>
 </body>
-</html>
+</html> -->
