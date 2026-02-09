@@ -8,7 +8,7 @@ permalink: /resume/
 <body>
   <h1>Redirecting to Resume...</h1>
   <script>
-    window.location.href = "https://drive.google.com/file/d/1CviGKZ7pHiqCtbpPJ7Bd74Ia__cepAr8/view?usp=sharing";
+    window.location.href = "https://docs.google.com/document/d/1DI8RkHnj3upN9bPLJNqYZa7_tLZF5750mEsUErmmsPI/edit?usp=sharing";
   </script>
 </body>
 </html>
