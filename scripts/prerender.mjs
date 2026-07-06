@@ -4,7 +4,7 @@ import { fileURLToPath, pathToFileURL } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const root = join(__dirname, '..')
-const dist = join(root, 'dist')
+const dist = join(root, 'docs')
 
 const template = readFileSync(join(dist, 'index.html'), 'utf-8')
 const { render, renderHead, ALL_ROUTES } = await import(
