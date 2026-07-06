@@ -1,7 +1,7 @@
 # Dependencies
 node_modules
 
-# Build output
+# Build output (docs/ is committed and served by GitHub Pages in branch mode)
 dist
 dist-server
 

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>A Kali Linux Toolkit for Security Assessments in Technical Due Diligence | Chen Yow Ru (Roy)</title>
+    <meta name="description" content="The command-line toolkit I reach for when technical due diligence includes a hands-on security assessment of a target’s infrastructure." />
+    <link rel="canonical" href="https://oxc7.github.io/blog/kali-linux-commands/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="A Kali Linux Toolkit for Security Assessments in Technical Due Diligence | Chen Yow Ru (Roy)" />
+    <meta property="og:description" content="The command-line toolkit I reach for when technical due diligence includes a hands-on security assessment of a target’s infrastructure." />
+    <meta property="og:url" content="https://oxc7.github.io/blog/kali-linux-commands/" />
+    <meta property="og:image" content="https://oxc7.github.io/resources/chen.png" />
+    <meta property="og:site_name" content="Chen Yow Ru (Roy)" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="A Kali Linux Toolkit for Security Assessments in Technical Due Diligence | Chen Yow Ru (Roy)" />
+    <meta name="twitter:description" content="The command-line toolkit I reach for when technical due diligence includes a hands-on security assessment of a target’s infrastructure." />
+    <meta name="twitter:image" content="https://oxc7.github.io/resources/chen.png" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Chen Yow Ru","alternateName":"Roy Chen","url":"https://oxc7.github.io","image":"https://oxc7.github.io/resources/chen.png","email":"mailto:royc09587@gmail.com","jobTitle":"AI Lead","worksFor":{"@type":"Organization","name":"WAY Equity Partners","url":"https://www.wayequity.co/","address":{"@type":"PostalAddress","addressCountry":"JP","addressLocality":"Tokyo"}},"workLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Tokyo","addressCountry":"JP"}},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Tokyo"},{"@type":"CollegeOrUniversity","name":"Northwestern University"}],"knowsLanguage":["English","Japanese","Chinese","Taiwanese","Arabic"],"knowsAbout":["AI value creation in private equity","Technical due diligence","Machine learning","Natural language processing","Computer vision"],"sameAs":["https://github.com/oxc7"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"A Kali Linux Toolkit for Security Assessments in Technical Due Diligence","description":"The command-line toolkit I reach for when technical due diligence includes a hands-on security assessment of a target’s infrastructure.","datePublished":"2025-02-23","url":"https://oxc7.github.io/blog/kali-linux-commands/","author":{"@type":"Person","name":"Chen Yow Ru"}}</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L1CK3J07"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X4L1CK3J07');
+    </script>
+    <script type="module" crossorigin src="/assets/index-D9REqASa.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-NCKGT46U.css">
+  </head>
+  <body>
+    <div id="root"><div class="site"><header class="masthead"><div class="masthead__inner"><a href="/" class="brand"><span class="brand__mark">CYR</span><span class="brand__name">Chen Yow Ru</span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav "><a href="/" class="nav__link ">Home</a><a href="/resume/" class="nav__link ">Resume</a><a href="/projects/" class="nav__link ">Projects</a><a href="/patents/" class="nav__link ">Patents</a><a href="/blog/" class="nav__link nav__link--active">Blog</a></nav></div></header><main class="main"><article class="page post"><header class="page__header"><a href="/blog/" class="post__back">← All notes</a><h1 class="page__title">A Kali Linux Toolkit for Security Assessments in Technical Due Diligence</h1><time class="post__date">February 23, 2025</time></header><div class="post__body prose"><p>When technical due diligence includes a hands-on security assessment of a target&#39;s infrastructure, a repeatable command-line toolkit makes the work fast and thorough. Kali Linux — a Debian-based distribution built for security testing — bundles the tooling I reach for most. Below are the commands that carry the weight of a typical assessment. Every one of them should only be run against systems you are authorized to test.</p>
+<h2>1. Network scanning with Nmap</h2>
+<p>Nmap discovers hosts and services on a network:</p>
+<pre><code class="language-bash">nmap -sV -p 1-65535 target_ip
+</code></pre>
+<ul>
+<li><code>-sV</code> enables service-version detection, which is how you identify vulnerable software versions.</li>
+<li><code>-p 1-65535</code> scans all ports so no access point is overlooked.</li>
+</ul>
+<p>Reconnaissance is the first step, and Nmap maps the attack surface quickly.</p>
+<h2>2. Enumerating subdomains with Sublist3r</h2>
+<p>Subdomain discovery surfaces hidden parts of a domain:</p>
+<pre><code class="language-bash">sublist3r -d target.com
+</code></pre>
+<p>This uncovers overlooked subdomains and misconfigured servers that never appear in initial recon.</p>
+<h2>3. Brute-forcing SSH with Hydra</h2>
+<p>Hydra tests credential strength across many protocols, including SSH:</p>
+<pre><code class="language-bash">hydra -l user -P passwords.txt target_ip ssh
+</code></pre>
+<ul>
+<li><code>-l user</code> sets the username to target.</li>
+<li><code>-P passwords.txt</code> points to the password wordlist.</li>
+</ul>
+<p>Useful for demonstrating weak-password risk — only in authorized engagements.</p>
+<h2>4. Packet capture with tcpdump</h2>
+<p>tcpdump intercepts and logs traffic on an interface, which is invaluable for spotting unencrypted data in transit:</p>
+<pre><code class="language-bash">tcpdump -i eth0 -w capture.pcap
+</code></pre>
+<ul>
+<li><code>-i eth0</code> captures on the <code>eth0</code> interface.</li>
+<li><code>-w capture.pcap</code> writes packets to a file for offline analysis.</li>
+</ul>
+<h2>5. Checking open ports with Netcat</h2>
+<p>Netcat is the &quot;Swiss Army knife&quot; of network diagnostics:</p>
+<pre><code class="language-bash">nc -zv target_ip 1-1000
+</code></pre>
+<ul>
+<li><code>-z</code> scans without sending data — fast and quiet.</li>
+<li><code>-v</code> produces verbose output.</li>
+</ul>
+<h2>6. Privilege-escalation checks</h2>
+<p>Privilege escalation is a common path to root. Find files with SUID permissions, a frequent escalation vector:</p>
+<pre><code class="language-bash">find / -perm -4000 2&gt;/dev/null
+</code></pre>
+<p>Misconfigured SUID binaries let unauthorized users execute code with elevated privileges.</p>
+<h2>Closing note</h2>
+<p>These commands turn a security assessment from ad hoc poking into a structured, repeatable process — exactly what diligence demands. Always operate with written authorization; responsible, in-scope use is what separates a security assessment from an intrusion.</p>
+</div></article></main><footer class="footer"><div class="footer__inner"><p>Chen Yow Ru (Roy)<!-- --> — <!-- -->AI Lead<!-- --> at<!-- --> <a href="https://www.wayequity.co/" target="_blank" rel="noopener noreferrer">WAY Equity Partners</a></p><div class="footer__links"><a href="mailto:royc09587@gmail.com">Email</a><a href="https://github.com/oxc7" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.wayequity.co/" target="_blank" rel="noopener noreferrer">WAY Equity</a></div><p class="footer__fine">© <!-- -->2026<!-- --> Chen Yow Ru. Tokyo, Japan.</p></div></footer></div></div>
+  </body>
+</html>
