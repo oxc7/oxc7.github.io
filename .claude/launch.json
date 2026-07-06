@@ -4,7 +4,7 @@
     {
       "name": "preview",
       "runtimeExecutable": "/Users/roy/.nvm/versions/node/v24.18.0/bin/node",
-      "runtimeArgs": ["node_modules/vite/bin/vite.js", "preview", "--port", "4173", "--strictPort"],
+      "runtimeArgs": ["node_modules/vite/bin/vite.js", "preview", "--outDir", "docs", "--port", "4173", "--strictPort"],
       "port": 4173
     }
   ]
