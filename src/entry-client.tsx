@@ -1,0 +1,8 @@
+import { hydrateRoot } from 'react-dom/client'
+import App from './App'
+import './styles/global.css'
+
+hydrateRoot(
+  document.getElementById('root')!,
+  <App initialPath={window.location.pathname} />,
+)
