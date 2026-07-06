@@ -10,7 +10,7 @@ const TIMELINE = [
     points: [
       'Lead AI value creation across a permanent-capital private equity portfolio, translating AI into measurable operating alpha in acquired businesses.',
       'Run technical due diligence on acquisition targets — architecture, data assets, model quality, security, and scaling cost.',
-      'Build the first-90-days AI roadmap for new portfolio companies from diligence findings.',
+      'Build the first-100-days AI roadmap during the Post-Merger Integration (PMI) phase for new portfolio companies, from diligence findings.',
     ],
   },
   {
@@ -20,6 +20,7 @@ const TIMELINE = [
     points: [
       'Developed production AI solutions across NLP and computer vision.',
       'Led penetration testing and security assessment of internal AI products.',
+      'Built applied AI systems; co-inventor on a granted patent for prospective client list generation.',
     ],
   },
   {
@@ -27,7 +28,17 @@ const TIMELINE = [
     role: 'AI Engineer',
     org: 'Matsuo Institute',
     points: [
-      'Built applied AI systems; co-inventor on a granted patent for prospective client list generation.',
+      'Team Leadership — led a team of four to develop AI solutions, resulting in a $1M+ contract renewal with a major Japanese publishing company.',
+      'Predictive Modeling — analyzed seasonal trends in product sales, contributing to strategies that increased client revenue by 50%.',
+    ],
+  },
+  {
+    period: 'Aug 2022 — Nov 2022',
+    location: 'Tokyo, Japan',
+    role: 'Research Engineer (Summer Intern)',
+    org: 'SenseTime',
+    points: [
+      'Fine-tuned BEVFormer models (transformer / temporal structures) for autonomous systems, improving real-time decision-making accuracy.',
     ],
   },
   {
@@ -43,6 +54,41 @@ const TIMELINE = [
 const EDUCATION = [
   { school: 'The University of Tokyo', degree: 'Master of Engineering' },
   { school: 'Northwestern University', degree: 'Bachelor of Science' },
+]
+
+const CERTIFICATIONS = [
+  {
+    name: 'AWS Certified Machine Learning — Specialty',
+    issuer: 'Amazon Web Services',
+    url: SITE.awsCert,
+  },
+  {
+    name: 'Deep Learning Specialization',
+    issuer: 'DeepLearning.AI · Coursera',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/H5FMH45NMT8W',
+  },
+  {
+    name: 'Mathematics for Machine Learning and Data Science',
+    issuer: 'DeepLearning.AI · Coursera',
+    url: 'https://www.coursera.org/account/accomplishments/specialization/certificate/HBN6NEMQGB6Z',
+  },
+]
+
+const AWARDS = [
+  {
+    text: 'Silver Prize — Liquid AI Hackathon',
+    year: '2026',
+    url: 'https://hackathons.liquid.ai/',
+  },
+  {
+    text: 'Japan Patent No. 7471760 — Prospective Client List Generation',
+    year: '2024',
+    url: SITE.patentUrl,
+  },
+  {
+    text: 'Technical Recognition — Taiwan OpenStack Application Hackathon',
+    year: '2016',
+  },
 ]
 
 export default function Resume() {
@@ -74,7 +120,10 @@ export default function Resume() {
         <div className="timeline">
           {TIMELINE.map((item) => (
             <TiltCard key={item.role + item.org} className="tl-item">
-              <div className="tl-item__period">{item.period}</div>
+              <div className="tl-item__period">
+                {item.period}
+                {'location' in item && item.location ? ` · ${item.location}` : ''}
+              </div>
               <h3 className="tl-item__role">
                 {item.role}
                 {' · '}
@@ -109,20 +158,40 @@ export default function Resume() {
       </section>
 
       <section className="section">
-        <h2 className="section__title">Certifications & Recognition</h2>
-        <ul className="prose">
-          <li>
-            <a href={SITE.awsCert} target="_blank" rel="noopener noreferrer">
-              AWS Certified Machine Learning — Specialty
+        <h2 className="section__title">Certifications &amp; Recognition</h2>
+
+        <h3 className="section__subhead">Certifications</h3>
+        <div className="creds">
+          {CERTIFICATIONS.map((c) => (
+            <a
+              key={c.name}
+              href={c.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cred cred--link"
+            >
+              <span className="cred__label">{c.name}</span>
+              <span className="cred__sub">{c.issuer}</span>
             </a>
-          </li>
-          <li>
-            <a href={SITE.patentUrl} target="_blank" rel="noopener noreferrer">
-              Japan Patent No. 7471760
-            </a>{' '}
-            — Prospective Client List Generation
-          </li>
-          <li>Technical Recognition — Taiwan OpenStack Application Hackathon (2016)</li>
+          ))}
+        </div>
+
+        <h3 className="section__subhead">Awards &amp; Recognition</h3>
+        <ul className="award-list">
+          {AWARDS.map((a) => (
+            <li key={a.text} className="award">
+              <span className="award__text">
+                {a.url ? (
+                  <a href={a.url} target="_blank" rel="noopener noreferrer">
+                    {a.text}
+                  </a>
+                ) : (
+                  a.text
+                )}
+              </span>
+              <span className="award__year">{a.year}</span>
+            </li>
+          ))}
         </ul>
       </section>
     </div>
