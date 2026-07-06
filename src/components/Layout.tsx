@@ -57,7 +57,7 @@ export default function Layout({ children }: { children: ReactNode }) {
       <footer className="footer">
         <div className="footer__inner">
           <p>
-            {SITE.name} — {SITE.jobTitle} at{' '}
+            {SITE.name} · {SITE.jobTitle} at{' '}
             <a href={SITE.firmUrl} target="_blank" rel="noopener noreferrer">
               {SITE.firm}
             </a>

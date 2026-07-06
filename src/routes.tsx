@@ -25,7 +25,7 @@ const SEO_SUFFIX = ` | ${SITE.name}`
 export const ROUTES: RouteMeta[] = [
   {
     path: '/',
-    title: 'Chen Yow Ru (Roy) — AI Lead at WAY Equity Partners',
+    title: 'Chen Yow Ru (Roy) · AI Lead at WAY Equity Partners',
     description:
       'AI Lead at WAY Equity Partners, a Japan-based permanent-capital private equity firm. I drive AI value creation for alpha in acquired businesses and lead technical due diligence on deals.',
     render: () => <Home />,
@@ -41,7 +41,7 @@ export const ROUTES: RouteMeta[] = [
     path: '/projects/',
     title: 'Projects' + SEO_SUFFIX,
     description:
-      'Applied AI projects by Chen Yow Ru, including a Patent Infringement Checker — examples of AI built for real IP, legal, and diligence workflows.',
+      'Applied AI projects by Chen Yow Ru, including a Patent Infringement Checker, examples of AI built for real IP, legal, and diligence workflows.',
     render: () => <Projects />,
   },
   {

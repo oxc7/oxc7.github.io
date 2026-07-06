@@ -8,7 +8,7 @@ export default function Blog() {
       <header className="page__header">
         <h1 className="page__title">Notes on Due Diligence & AI Security</h1>
         <p className="page__lede">
-          Field notes from technical due diligence and AI value creation — how I
+          Field notes from technical due diligence and AI value creation: how I
           assess the technology behind a deal and de-risk what we buy.
         </p>
       </header>

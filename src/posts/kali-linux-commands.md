@@ -1,4 +1,4 @@
-When technical due diligence includes a hands-on security assessment of a target's infrastructure, a repeatable command-line toolkit makes the work fast and thorough. Kali Linux — a Debian-based distribution built for security testing — bundles the tooling I reach for most. Below are the commands that carry the weight of a typical assessment. Every one of them should only be run against systems you are authorized to test.
+When technical due diligence includes a hands-on security assessment of a target's infrastructure, a repeatable command-line toolkit makes the work fast and thorough. Kali Linux, a Debian-based distribution built for security testing, bundles the tooling I reach for most. Below are the commands that carry the weight of a typical assessment. Every one of them should only be run against systems you are authorized to test.
 
 ## 1. Network scanning with Nmap
 
@@ -34,7 +34,7 @@ hydra -l user -P passwords.txt target_ip ssh
 - `-l user` sets the username to target.
 - `-P passwords.txt` points to the password wordlist.
 
-Useful for demonstrating weak-password risk — only in authorized engagements.
+Useful for demonstrating weak-password risk, strictly in authorized engagements.
 
 ## 4. Packet capture with tcpdump
 
@@ -55,7 +55,7 @@ Netcat is the "Swiss Army knife" of network diagnostics:
 nc -zv target_ip 1-1000
 ```
 
-- `-z` scans without sending data — fast and quiet.
+- `-z` scans without sending data, so it stays fast and quiet.
 - `-v` produces verbose output.
 
 ## 6. Privilege-escalation checks
@@ -70,4 +70,4 @@ Misconfigured SUID binaries let unauthorized users execute code with elevated pr
 
 ## Closing note
 
-These commands turn a security assessment from ad hoc poking into a structured, repeatable process — exactly what diligence demands. Always operate with written authorization; responsible, in-scope use is what separates a security assessment from an intrusion.
+These commands turn a security assessment from ad hoc poking into a structured, repeatable process, which is exactly what diligence demands. Always operate with written authorization; responsible, in-scope use is what separates a security assessment from an intrusion.

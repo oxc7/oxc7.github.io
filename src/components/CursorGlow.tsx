@@ -2,7 +2,7 @@ import { useEffect } from 'react'
 
 /**
  * A soft radial spotlight that trails the pointer across the whole page.
- * Purely decorative — disabled for touch devices and reduced-motion users.
+ * Purely decorative; disabled for touch devices and reduced-motion users.
  */
 export default function CursorGlow() {
   useEffect(() => {
