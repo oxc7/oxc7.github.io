@@ -3,18 +3,18 @@ import TiltCard from '../components/TiltCard'
 
 const TIMELINE = [
   {
-    period: '2026 — Present',
+    period: '2026 – Present',
     role: 'AI Lead',
     org: 'WAY Equity Partners',
     orgUrl: SITE.firmUrl,
     points: [
       'Lead AI value creation across a permanent-capital private equity portfolio, translating AI into measurable operating alpha in acquired businesses.',
-      'Run technical due diligence on acquisition targets — architecture, data assets, model quality, security, and scaling cost.',
-      'Build the first-100-days AI roadmap during the Post-Merger Integration (PMI) phase for new portfolio companies, from diligence findings.',
+      'Run technical due diligence on acquisition targets: architecture, data assets, model quality, security, and scaling cost.',
+      'Build the first 90 days AI roadmap during the Post-Merger Integration (PMI) phase for new portfolio companies, from diligence findings.',
     ],
   },
   {
-    period: '2023 — 2026',
+    period: '2023 – 2026',
     role: 'Machine Learning Engineer',
     org: 'Exawizards',
     points: [
@@ -24,16 +24,16 @@ const TIMELINE = [
     ],
   },
   {
-    period: '2021 — 2023',
+    period: '2021 – 2023',
     role: 'AI Engineer',
     org: 'Matsuo Institute',
     points: [
-      'Team Leadership — led a team of four to develop AI solutions, resulting in a $1M+ contract renewal with a major Japanese publishing company.',
-      'Predictive Modeling — analyzed seasonal trends in product sales, contributing to strategies that increased client revenue by 50%.',
+      'Team leadership: led a team of four to develop AI solutions, resulting in a $1M+ contract renewal with a major Japanese publishing company.',
+      'Predictive modeling: analyzed seasonal trends in product sales, contributing to strategies that increased client revenue by 50%.',
     ],
   },
   {
-    period: 'Aug 2022 — Nov 2022',
+    period: 'Aug 2022 – Nov 2022',
     location: 'Tokyo, Japan',
     role: 'Research Engineer (Summer Intern)',
     org: 'SenseTime',
@@ -58,7 +58,7 @@ const EDUCATION = [
 
 const CERTIFICATIONS = [
   {
-    name: 'AWS Certified Machine Learning — Specialty',
+    name: 'AWS Certified Machine Learning – Specialty',
     issuer: 'Amazon Web Services',
     url: SITE.awsCert,
   },
@@ -76,17 +76,17 @@ const CERTIFICATIONS = [
 
 const AWARDS = [
   {
-    text: 'Silver Prize — Liquid AI Hackathon',
+    text: 'Silver Prize, Liquid AI Hackathon',
     year: '2026',
     url: 'https://hackathons.liquid.ai/',
   },
   {
-    text: 'Japan Patent No. 7471760 — Prospective Client List Generation',
+    text: 'Japan Patent No. 7471760: Prospective Client List Generation',
     year: '2024',
     url: SITE.patentUrl,
   },
   {
-    text: 'Technical Recognition — Taiwan OpenStack Application Hackathon',
+    text: 'Technical Recognition, Taiwan OpenStack Application Hackathon',
     year: '2016',
   },
 ]

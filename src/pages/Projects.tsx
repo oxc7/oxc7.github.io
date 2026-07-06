@@ -5,12 +5,12 @@ const PROJECTS = [
     title: 'Patent Infringement Checker',
     image: '/resources/patent_infringement.png',
     description:
-      'A web tool that evaluates potential patent-infringement risk — an example of AI applied to the IP, legal, and diligence workflows that private equity relies on.',
+      'A web tool that evaluates potential patent-infringement risk, an example of AI applied to the IP, legal, and diligence workflows that private equity relies on.',
     features: [
-      'Infringement analysis — identifies products that may infringe a given patent.',
-      'Comprehensive reports — likelihood assessment, relevant claims, and key features.',
-      'User-friendly interface — a simple web tool for analysis and review.',
-      'Report management — save and revisit past analyses.',
+      'Infringement analysis: identifies products that may infringe a given patent.',
+      'Comprehensive reports: likelihood assessment, relevant claims, and key features.',
+      'User-friendly interface: a simple web tool for analysis and review.',
+      'Report management: save and revisit past analyses.',
     ],
   },
 ]
@@ -21,7 +21,7 @@ export default function Projects() {
       <header className="page__header">
         <h1 className="page__title">Projects</h1>
         <p className="page__lede">
-          Applied AI built for real decisions — the kind of tooling that supports
+          Applied AI built for real decisions: the kind of tooling that supports
           due diligence and value creation, not demos.
         </p>
       </header>

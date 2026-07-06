@@ -7,7 +7,7 @@ const PILLARS = [
   {
     tag: '01',
     title: 'AI Value Creation for Alpha',
-    body: 'After we acquire a business, I find where AI creates real operating leverage — automating workflows, sharpening pricing and demand signals, and turning proprietary data into a durable edge. The goal is measurable alpha in the portfolio, not pilots that never ship.',
+    body: 'After we acquire a business, I find where AI creates real operating leverage: automating workflows, sharpening pricing and demand signals, and turning proprietary data into a durable edge. The goal is measurable alpha in the portfolio, not pilots that never ship.',
   },
   {
     tag: '02',
@@ -38,7 +38,7 @@ export default function Home() {
             we acquire.
           </h1>
           <p className="hero__lede">
-            I&rsquo;m Chen Yow Ru (Roy), AI Lead at WAY Equity Partners — a
+            I&rsquo;m Chen Yow Ru (Roy), AI Lead at WAY Equity Partners, a
             Japan-based private equity firm operating on a{' '}
             <strong>permanent-capital</strong> basis. I drive AI value creation
             across our portfolio and lead technical due diligence on the
@@ -75,7 +75,7 @@ export default function Home() {
           a five-year exit. That changes how AI should be built inside a portfolio
           company: I invest in durable systems and compounding data advantages,
           not quick wins that look good at sale. Value creation and diligence feed
-          each other — what I learn assessing a target becomes the first ninety
+          each other. What I learn assessing a target becomes the first ninety
           days of its AI roadmap.
         </p>
       </section>

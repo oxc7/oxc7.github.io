@@ -34,7 +34,7 @@ export const POSTS: Post[] = [
     'pentest-ai-products',
     'Penetration Testing AI Products: A Due-Diligence Lens',
     '2025-02-12',
-    'How I assess whether an acquisition target’s AI product can be broken — and why security posture is an input to valuation.',
+    'How I assess whether an acquisition target’s AI product can be broken, and why security posture is an input to valuation.',
     pentestRaw,
   ),
 ]
