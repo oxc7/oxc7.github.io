@@ -70,6 +70,9 @@ export default function Layout({ children }: { children: ReactNode }) {
           </p>
           <div className="footer__links">
             <a href={`mailto:${SITE.email}`}>Email</a>
+            <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
+              LinkedIn
+            </a>
             <a href={SITE.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>

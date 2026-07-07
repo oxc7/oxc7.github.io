@@ -107,10 +107,15 @@ export default function Resume() {
             rel="noopener noreferrer"
             className="btn btn--primary"
           >
-            Full resume (Google Doc)
+            View full resume
           </a>
-          <a href={SITE.resumePdf} className="btn btn--ghost">
-            Download PDF
+          <a
+            href={SITE.linkedin}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="btn btn--ghost"
+          >
+            LinkedIn
           </a>
         </div>
       </header>
