@@ -30,6 +30,13 @@ export default function Home() {
       <section className="hero">
         <ParticleHero />
         <div className="hero__content">
+          <img
+            src="/resources/chen.png"
+            alt="Chen Yow Ru (Roy)"
+            className="hero__portrait"
+            width="120"
+            height="120"
+          />
           <p className="hero__eyebrow">
             AI Lead · <a href={SITE.firmUrl} target="_blank" rel="noopener noreferrer">WAY Equity Partners</a>
           </p>
