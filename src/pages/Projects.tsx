@@ -10,6 +10,7 @@ type OutputTable = {
 type Project = {
   title: string
   award?: string
+  repo?: string
   problem: string
   useCase: string
   demo: string[]
@@ -20,6 +21,46 @@ type Project = {
 }
 
 const PROJECTS: Project[] = [
+  {
+    title: 'AI Technical Due Diligence Assistant',
+    repo: 'https://github.com/oxc7/ai-technical-dd-assistant',
+    problem:
+      'Before capital is committed, a deal team has to judge a target’s technology from whatever exists (technical and non-technical, often incomplete), and the target frequently doesn’t know what it doesn’t know about AI. Reading it all and turning it into a defensible view is slow, and generic AI tools produce vague memos that don’t hold up in the investment committee.',
+    useCase:
+      'PE and family-office deal teams and technical due-diligence leads running an AI roll-up / buy-and-build strategy, plus the operating partners who will own value creation post-close.',
+    demo: [
+      'Ingest the target’s documents (architecture notes, GitHub summary, product docs, website text, commercials), labeled technical or non-technical.',
+      'Each document is chunked, embedded, and stored in a per-company knowledge base (RAG).',
+      'For each diligence dimension, the most relevant passages are retrieved and passed to Claude as grounded context.',
+      'Claude returns a structured memo whose findings cite the evidence, with the gaps turned into follow-up questions.',
+    ],
+    output: {
+      columns: ['Area', 'Finding', 'Risk', 'Evidence', 'Follow-up Question'],
+      rows: [
+        ['Architecture', 'Heavy vendor lock-in', 'Medium', 'AWS-only inference stack', 'What is the monthly infra cost?'],
+        ['Data', 'No clear data moat', 'High', 'Uses public datasets only', 'What proprietary data exists?'],
+        ['AI Model', 'No evaluation framework', 'High', 'No benchmark shown', 'How is model quality measured?'],
+      ],
+      badgeCol: 2,
+      note: 'Illustrative output. The memo also covers strengths and weaknesses, the best AI path forward, and roll-up fit. An early-stage screen, not a substitute for confirmatory diligence.',
+    },
+    techStack: [
+      'Next.js',
+      'TypeScript',
+      'Claude (Opus 4.8)',
+      'RAG',
+      'Postgres',
+      'pgvector',
+      'Prisma',
+      'Voyage embeddings',
+    ],
+    businessValue: [
+      'Turns a pile of mixed target information into a defensible, IC-ready diligence view in minutes.',
+      'Grounds every finding in the target’s own documents, so the memo is specific rather than generic.',
+      'Surfaces the best AI path forward (value creation) alongside the risks, in one pass.',
+      'Assesses roll-up fit: platform vs bolt-on, integration risk, and how cleanly the stack consolidates across a portfolio.',
+    ],
+  },
   {
     title: 'AI Value Creation Roadmap Generator',
     problem:
@@ -67,7 +108,7 @@ const PROJECTS: Project[] = [
     useCase:
       'Rail and transit operators (safety and operations teams), station managers, and the infrastructure operators and investors who own transport assets.',
     demo: [
-      'A platform camera frame is captured — it works on existing station CCTV.',
+      'A platform camera frame is captured from existing station CCTV.',
       'A compact on-device vision model flags unsafe behavior (leaning over the edge, crossing the yellow line, entering the track area) with a severity level.',
       'The system writes a short announcement addressed to the specific person and location.',
       'It speaks it in a familiar, attention-catching station voice (Yamanote-line style) in real time, so the warning actually lands.',
@@ -251,6 +292,14 @@ export default function Projects() {
                   ))}
                 </ul>
               </Section>
+
+              {p.repo && (
+                <p className="project__meta">
+                  <a href={p.repo} target="_blank" rel="noopener noreferrer">
+                    View on GitHub
+                  </a>
+                </p>
+              )}
             </div>
           </TiltCard>
         ))}
