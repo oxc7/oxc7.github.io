@@ -39,8 +39,8 @@ export default function Home() {
             AI Lead · <a href={SITE.firmUrl} target="_blank" rel="noopener noreferrer">WAY Equity Partners</a>
           </p>
           <h1 className="hero__title">
-            I turn AI into <span className="grad">alpha</span> for the businesses
-            we acquire.
+            I lead <span className="grad">AI value creation</span> and technical
+            diligence for permanent-capital private equity.
           </h1>
           <p className="hero__lede">
             I&rsquo;m Chen Yow Ru (Roy), AI Lead at WAY Equity Partners, a
