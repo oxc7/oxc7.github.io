@@ -1,36 +1,151 @@
 import TiltCard from '../components/TiltCard'
 
-const REPO_URL = 'https://github.com/oxc7/Patlytics_Takehome'
+type OutputTable = {
+  columns: string[]
+  rows: string[][]
+  badgeCol: number
+  note?: string
+}
 
-const SAMPLE_ROWS = [
+type Project = {
+  title: string
+  problem: string
+  useCase: string
+  demo: string[]
+  output: OutputTable
+  techStack: string[]
+  businessValue: string[]
+  disclaimer?: string
+}
+
+const PROJECTS: Project[] = [
   {
-    feature: 'AI lead scoring',
-    claim: 'Claim 3',
-    similarity: '72%',
-    risk: 'Medium',
-    review: 'Ask IP counsel to review',
+    title: 'AI Value Creation Roadmap Generator',
+    problem:
+      'After acquiring a business, the operating team has to answer one question fast: where does AI actually create value here? Generic AI-strategy decks don’t map to the specific company, and manually auditing every function for high-ROI opportunities is slow, subjective, and hard to compare across a portfolio.',
+    useCase:
+      'PE operating partners and deal teams, portfolio-company CEOs and CTOs, and the value-creation team building the post-close AI roadmap.',
+    demo: [
+      'Enter the portfolio company’s profile: industry, team size, pain points, current tools, data, budget, and risk tolerance.',
+      'An LLM agent extracts signals and screens candidate AI workflows across each function.',
+      'It ranks the top opportunities by impact, difficulty, and risk, keeping a human-in-the-loop check on sensitive steps.',
+      'It outputs a prioritized roadmap, an ROI score per initiative, success metrics, and a “do not automate yet” list.',
+    ],
+    output: {
+      columns: ['AI Workflow', 'Value Lever', 'Impact', 'Effort', 'Priority'],
+      rows: [
+        ['Automate document intake with LLM extraction', 'Ops efficiency', 'High', 'Low', 'High'],
+        ['Sales-outreach copilot', 'Revenue growth', 'High', 'Medium', 'Medium'],
+        ['Churn-risk scoring on the customer base', 'Retention', 'Medium', 'Low', 'Medium'],
+      ],
+      badgeCol: 4,
+      note: 'Illustrative output. Scores are a prioritization signal for the operating team, ranked by an ROI model.',
+    },
+    techStack: [
+      'Next.js',
+      'TypeScript',
+      'React',
+      'OpenAI (GPT-4o)',
+      'Agentic workflow',
+      'Structured JSON schema',
+      'ROI scoring engine',
+      'Tailwind CSS',
+    ],
+    businessValue: [
+      'Turns a multi-week AI discovery exercise into a same-day first-pass roadmap.',
+      'Standardizes how AI opportunities are found and prioritized across the portfolio.',
+      'Gives the investment committee and portfolio leadership a defensible, ROI-ranked plan tied to value levers.',
+      'Builds the first-90-days PMI AI roadmap with human-in-the-loop guardrails on sensitive workflows.',
+    ],
   },
   {
-    feature: 'Company matching algorithm',
-    claim: 'Claim 5',
-    similarity: '81%',
-    risk: 'High',
-    review: 'Compare implementation details',
+    title: 'IP Risk Screening Tool for Technical Due Diligence',
+    disclaimer:
+      'Not a substitute for legal counsel. This is an early-warning screen for red-flag detection during diligence. Every flag is a candidate for review by qualified IP counsel, not a legal determination.',
+    problem:
+      'Undisclosed IP exposure can surface after close and derail the value-creation plan. Running formal legal review across every product feature and patent claim is slow and expensive, so teams need a way to triage where the real exposure is.',
+    useCase:
+      'PE deal teams and technical due-diligence leads, with IP counsel as the downstream reviewer, and portfolio-company CTOs.',
+    demo: [
+      'Load the target’s product features and a body of relevant patents.',
+      'Match each product feature to the most relevant patent claims.',
+      'Score similarity and assign a triage risk level.',
+      'Output a prioritized review list and save the report for the diligence trail.',
+    ],
+    output: {
+      columns: [
+        'Product Feature',
+        'Related Patent Claim',
+        'Similarity',
+        'Risk',
+        'Suggested Review',
+      ],
+      rows: [
+        ['AI lead scoring', 'Claim 3', '72%', 'Medium', 'Ask IP counsel to review'],
+        ['Company matching algorithm', 'Claim 5', '81%', 'High', 'Compare implementation details'],
+      ],
+      badgeCol: 3,
+      note: 'Illustrative output. Similarity scores are a triage signal, not a measure of legal infringement.',
+    },
+    techStack: ['Python', 'Flask', 'Fuzzy claim matching', 'LLM scoring path', 'Docker'],
+    businessValue: [
+      'Surfaces IP red flags early, before expensive legal review begins.',
+      'Directs counsel to the highest-risk items first.',
+      'Feeds deal pricing and risk assessment during diligence.',
+      'Leaves an auditable trail of what was screened and flagged.',
+    ],
   },
 ]
 
-const HOW_IT_WORKS = [
-  'Maps a target’s product features to the most relevant claims across a body of patents.',
-  'Scores similarity and assigns a triage risk level (High / Medium / Low).',
-  'Returns a prioritized review list so counsel’s time goes to the highest-risk items first.',
-  'Saves each run as a report for an auditable diligence trail.',
-]
+function badgeClass(value: string): string {
+  const v = value.toLowerCase()
+  if (v === 'high') return 'risk risk--high'
+  if (v === 'medium') return 'risk risk--med'
+  if (v === 'low') return 'risk risk--low'
+  return ''
+}
 
-function riskClass(risk: string): string {
-  const r = risk.toLowerCase()
-  if (r === 'high') return 'risk risk--high'
-  if (r === 'medium') return 'risk risk--med'
-  return 'risk risk--low'
+function Section({ label, children }: { label: string; children: React.ReactNode }) {
+  return (
+    <>
+      <h3 className="project__subhead">{label}</h3>
+      {children}
+    </>
+  )
+}
+
+function OutputTableView({ table }: { table: OutputTable }) {
+  return (
+    <>
+      <div className="table-wrap">
+        <table className="data-table">
+          <thead>
+            <tr>
+              {table.columns.map((c) => (
+                <th key={c}>{c}</th>
+              ))}
+            </tr>
+          </thead>
+          <tbody>
+            {table.rows.map((row, ri) => (
+              <tr key={ri}>
+                {row.map((cell, ci) => (
+                  <td key={ci}>
+                    {ci === table.badgeCol && badgeClass(cell) ? (
+                      <span className={badgeClass(cell)}>{cell}</span>
+                    ) : (
+                      cell
+                    )}
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+      {table.note && <p className="table-note">{table.note}</p>}
+    </>
+  )
 }
 
 export default function Projects() {
@@ -39,91 +154,64 @@ export default function Projects() {
       <header className="page__header">
         <h1 className="page__title">Projects</h1>
         <p className="page__lede">
-          Applied AI built for the way I work: tooling that de-risks deals and
-          supports diligence, not demos.
+          Applied AI built for the way I work: tools for investors and operators
+          that de-risk deals and create value, not demos.
         </p>
       </header>
 
       <div className="project-list">
-        <TiltCard className="project" as="article">
-          <div className="project__body">
-            <h2 className="project__title">
-              IP Risk Screening Tool for Technical Due Diligence
-            </h2>
-            <p className="project__desc">
-              Undisclosed IP exposure is the kind of risk that surfaces after
-              close and derails the value-creation plan. This tool screens a
-              target’s product features against a body of patents to surface
-              early red flags, ranking likely-relevant claims by similarity and
-              assigning a triage risk level. The point is speed and focus: send
-              counsel the highest-risk items first, before the deeper legal
-              review begins.
-            </p>
+        {PROJECTS.map((p) => (
+          <TiltCard key={p.title} className="project" as="article">
+            <div className="project__body">
+              <h2 className="project__title">{p.title}</h2>
 
-            <div className="callout">
-              <strong>Not a substitute for legal counsel.</strong> This is an
-              early-warning screen for red-flag detection during diligence. Every
-              flag is a candidate for review by qualified IP counsel, not a legal
-              determination.
-            </div>
+              {p.disclaimer && (
+                <div className="callout">
+                  <strong>{p.disclaimer.split('.')[0]}.</strong>
+                  {p.disclaimer.slice(p.disclaimer.indexOf('.') + 1)}
+                </div>
+              )}
 
-            <h3 className="project__subhead">Sample output</h3>
-            <div className="table-wrap">
-              <table className="data-table">
-                <thead>
-                  <tr>
-                    <th>Product Feature</th>
-                    <th>Related Patent Claim</th>
-                    <th>Similarity</th>
-                    <th>Risk</th>
-                    <th>Suggested Review</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {SAMPLE_ROWS.map((row) => (
-                    <tr key={row.feature}>
-                      <td>{row.feature}</td>
-                      <td>{row.claim}</td>
-                      <td>{row.similarity}</td>
-                      <td>
-                        <span className={riskClass(row.risk)}>{row.risk}</span>
-                      </td>
-                      <td>{row.review}</td>
-                    </tr>
+              <Section label="Problem">
+                <p className="project__desc">{p.problem}</p>
+              </Section>
+
+              <Section label="Use case">
+                <p className="project__desc">{p.useCase}</p>
+              </Section>
+
+              <Section label="Demo">
+                <ol className="workflow">
+                  {p.demo.map((step) => (
+                    <li key={step}>{step}</li>
                   ))}
-                </tbody>
-              </table>
+                </ol>
+              </Section>
+
+              <Section label="Output">
+                <OutputTableView table={p.output} />
+              </Section>
+
+              <Section label="Tech stack">
+                <ul className="tech-chips">
+                  {p.techStack.map((t) => (
+                    <li key={t} className="tech-chip">
+                      {t}
+                    </li>
+                  ))}
+                </ul>
+              </Section>
+
+              <Section label="Business value">
+                <ul className="project__features">
+                  {p.businessValue.map((b) => (
+                    <li key={b}>{b}</li>
+                  ))}
+                </ul>
+              </Section>
             </div>
-            <p className="table-note">
-              Illustrative output. Similarity scores are a triage signal, not a
-              measure of legal infringement.
-            </p>
-
-            <h3 className="project__subhead">How it works</h3>
-            <ul className="project__features">
-              {HOW_IT_WORKS.map((item) => (
-                <li key={item}>{item}</li>
-              ))}
-            </ul>
-
-            <h3 className="project__subhead">Why it matters for diligence</h3>
-            <p className="project__desc">
-              This sits right at the intersection of what I do: patent experience
-              (co-inventor on a granted patent), applied AI, and technical due
-              diligence. Catching an IP red flag early changes how a deal is
-              priced and de-risked, and it directs expensive legal hours to where
-              the real exposure is.
-            </p>
-
-            <p className="project__meta">
-              Python · Flask · fuzzy claim matching with an LLM scoring path
-              (working prototype). ·{' '}
-              <a href={REPO_URL} target="_blank" rel="noopener noreferrer">
-                Source on GitHub
-              </a>
-            </p>
-          </div>
-        </TiltCard>
+          </TiltCard>
+        ))}
       </div>
     </div>
   )

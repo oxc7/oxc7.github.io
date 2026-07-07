@@ -555,6 +555,56 @@ a.cred .cred__label {
   border-top: 1px solid var(--border);
 }
 
+/* Demo workflow steps */
+.workflow {
+  list-style: none;
+  counter-reset: step;
+  margin: 0;
+  padding: 0;
+}
+.workflow li {
+  counter-increment: step;
+  position: relative;
+  padding-left: 42px;
+  margin-bottom: 14px;
+  color: var(--text-dim);
+}
+.workflow li::before {
+  content: counter(step);
+  position: absolute;
+  left: 0;
+  top: -1px;
+  width: 27px;
+  height: 27px;
+  border-radius: 50%;
+  background: rgba(var(--accent-rgb), 0.14);
+  border: 1px solid rgba(var(--accent-rgb), 0.4);
+  color: var(--accent-2);
+  font-size: 0.8rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Tech stack chips */
+.tech-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.tech-chip {
+  font-size: 0.82rem;
+  color: var(--text-dim);
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  padding: 5px 12px;
+}
+
 /* Disclaimer callout */
 .callout {
   background: rgba(var(--accent-rgb), 0.08);
