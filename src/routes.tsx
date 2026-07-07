@@ -43,7 +43,7 @@ export const ROUTES: RouteMeta[] = [
     path: '/projects/',
     title: 'Projects' + SEO_SUFFIX,
     description:
-      'Applied AI projects by Chen Yow Ru, including a Patent Infringement Checker, examples of AI built for real IP, legal, and diligence workflows.',
+      'Applied AI projects by Chen Yow Ru, including an IP Risk Screening Tool for technical due diligence: early patent red-flag detection before legal review.',
     render: () => <Projects />,
   },
   {
