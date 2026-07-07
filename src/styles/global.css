@@ -689,6 +689,24 @@ a.cred .cred__label {
   background: rgba(52, 224, 160, 0.12);
   border-color: rgba(52, 224, 160, 0.35);
 }
+.risk--emergency {
+  color: #ffd2d2;
+  background: rgba(255, 60, 60, 0.22);
+  border-color: rgba(255, 60, 60, 0.6);
+}
+
+/* Award tag */
+.award-tag {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--accent-2);
+  background: rgba(52, 224, 208, 0.1);
+  border: 1px solid rgba(52, 224, 208, 0.35);
+  border-radius: 999px;
+  padding: 4px 13px;
+  margin: 0 0 18px;
+}
 .patent__title {
   font-size: 1.4rem;
   margin: 0 0 8px;

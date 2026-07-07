@@ -9,6 +9,7 @@ type OutputTable = {
 
 type Project = {
   title: string
+  award?: string
   problem: string
   useCase: string
   demo: string[]
@@ -59,6 +60,44 @@ const PROJECTS: Project[] = [
     ],
   },
   {
+    title: 'SafeTracks: AI Platform-Edge Safety Announcements',
+    award: 'Silver Prize · Liquid AI Hackathon 2026',
+    problem:
+      'On crowded train platforms, passengers drift over the edge, rush the doors, or stumble near the tracks, and a moment’s inattention can be fatal. Generic alarms and static signage get tuned out, while the operator carries the safety liability and the service disruption of every incident.',
+    useCase:
+      'Rail and transit operators (safety and operations teams), station managers, and the infrastructure operators and investors who own transport assets.',
+    demo: [
+      'A platform camera frame is captured — it works on existing station CCTV.',
+      'A compact on-device vision model flags unsafe behavior (leaning over the edge, crossing the yellow line, entering the track area) with a severity level.',
+      'The system writes a short announcement addressed to the specific person and location.',
+      'It speaks it in a familiar, attention-catching station voice (Yamanote-line style) in real time, so the warning actually lands.',
+    ],
+    output: {
+      columns: ['Detected Behavior', 'Severity', 'Spoken Announcement'],
+      rows: [
+        ['Entering the track area', 'Emergency', 'Danger. Do not enter the tracks. Staff are responding.'],
+        ['Leaning over the platform edge', 'High', 'Passenger in the white shirt, please step back from the edge.'],
+        ['Crossing the yellow line', 'Medium', 'Please stay behind the yellow line.'],
+      ],
+      badgeCol: 1,
+      note: 'Illustrative output. Announcements are targeted to the person and location, and spoken in a familiar station voice to catch attention.',
+    },
+    techStack: [
+      'Python',
+      'Liquid AI LFM2.5-VL (vision)',
+      'Fine-tuned Liquid audio TTS',
+      'PyTorch',
+      'Transformers',
+      'On-device / edge inference',
+    ],
+    businessValue: [
+      'Turns existing platform cameras into a real-time fall-prevention system.',
+      'Person-specific announcements in a familiar voice cut through alarm fatigue, so warnings change behavior in the seconds that matter.',
+      'Runs on small, efficient on-device models, keeping cost and latency low and keeping video private (no cloud).',
+      'Reduces accident liability and service disruption for transit operators.',
+    ],
+  },
+  {
     title: 'IP Risk Screening Tool for Technical Due Diligence',
     disclaimer:
       'Not a substitute for legal counsel. This is an early-warning screen for red-flag detection during diligence. Every flag is a candidate for review by qualified IP counsel, not a legal determination.',
@@ -99,6 +138,7 @@ const PROJECTS: Project[] = [
 
 function badgeClass(value: string): string {
   const v = value.toLowerCase()
+  if (v === 'emergency') return 'risk risk--emergency'
   if (v === 'high') return 'risk risk--high'
   if (v === 'medium') return 'risk risk--med'
   if (v === 'low') return 'risk risk--low'
@@ -164,6 +204,8 @@ export default function Projects() {
           <TiltCard key={p.title} className="project" as="article">
             <div className="project__body">
               <h2 className="project__title">{p.title}</h2>
+
+              {p.award && <span className="award-tag">🥈 {p.award}</span>}
 
               {p.disclaimer && (
                 <div className="callout">
