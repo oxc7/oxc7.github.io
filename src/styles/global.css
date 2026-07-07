@@ -49,6 +49,16 @@ img {
   display: block;
 }
 
+/* ---------- Particle field (site-wide background) ---------- */
+.particle-field {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
 /* ---------- Cursor glow ---------- */
 .cursor-glow {
   position: fixed;
@@ -192,18 +202,13 @@ img {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  overflow: hidden;
   border-bottom: 1px solid var(--border);
-  background:
-    radial-gradient(1200px 500px at 70% -10%, rgba(var(--accent-rgb), 0.16), transparent 60%),
-    var(--bg);
-}
-.particle-canvas {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 0;
+  /* Transparent base so the fixed particle field shows through the hero. */
+  background: radial-gradient(
+    1200px 500px at 70% -10%,
+    rgba(var(--accent-rgb), 0.16),
+    transparent 60%
+  );
 }
 .hero__content {
   position: relative;
