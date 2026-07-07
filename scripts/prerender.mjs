@@ -52,8 +52,10 @@ for (const [from, to] of Object.entries(REDIRECTS)) {
 }
 
 // sitemap.xml
+const BUILD_DATE = new Date().toISOString().slice(0, 10)
 const urls = ALL_ROUTES.filter((r) => !r.noIndex).map(
-  (r) => `  <url><loc>${SITE_URL}${r.path}</loc></url>`,
+  (r) =>
+    `  <url><loc>${SITE_URL}${r.path}</loc><lastmod>${r.lastmod || BUILD_DATE}</lastmod></url>`,
 )
 const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">

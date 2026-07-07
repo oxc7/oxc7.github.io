@@ -33,11 +33,15 @@ export function renderHead(route: RouteMeta): string {
     `<meta property="og:description" content="${desc}" />`,
     `<meta property="og:url" content="${url}" />`,
     `<meta property="og:image" content="${image}" />`,
+    `<meta property="og:image:width" content="498" />`,
+    `<meta property="og:image:height" content="436" />`,
+    `<meta property="og:image:alt" content="${escapeAttr(SITE.name)}" />`,
     `<meta property="og:site_name" content="${escapeAttr(SITE.name)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${title}" />`,
     `<meta name="twitter:description" content="${desc}" />`,
     `<meta name="twitter:image" content="${image}" />`,
+    `<meta name="twitter:image:alt" content="${escapeAttr(SITE.name)}" />`,
     `<script type="application/ld+json">${JSON.stringify(PERSON_JSON_LD)}</script>`,
   ]
 

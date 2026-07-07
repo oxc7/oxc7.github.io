@@ -18,6 +18,8 @@ export type RouteMeta = {
   jsonLd?: object
   /** Exclude from sitemap.xml (e.g. redirect stubs, 404). */
   noIndex?: boolean
+  /** ISO date (YYYY-MM-DD) for sitemap <lastmod>; defaults to build date. */
+  lastmod?: string
 }
 
 const SEO_SUFFIX = ` | ${SITE.name}`
@@ -67,6 +69,7 @@ for (const post of POSTS) {
     title: post.title + SEO_SUFFIX,
     description: post.description,
     render: () => <BlogPost slug={post.slug} />,
+    lastmod: post.date,
     jsonLd: {
       '@context': 'https://schema.org',
       '@type': 'BlogPosting',
