@@ -6,10 +6,10 @@ export const SITE = {
   firmUrl: 'https://www.wayequity.co/',
   email: 'royc09587@gmail.com',
   github: 'https://github.com/oxc7',
+  linkedin: 'https://www.linkedin.com/in/ox7/',
   ogImage: '/resources/chen.png',
   resumeDoc:
     'https://docs.google.com/document/d/1DI8RkHnj3upN9bPLJNqYZa7_tLZF5750mEsUErmmsPI/edit?usp=sharing',
-  resumePdf: '/resources/resume.pdf',
   awsCert:
     'https://www.credly.com/badges/e2a0599b-503a-46b6-9440-7dfb5fc53215/linked_in_profile',
   patentUrl: 'https://ipforce.jp/patent-jp-P_B1-7471760',
@@ -50,5 +50,5 @@ export const PERSON_JSON_LD = {
     'Natural language processing',
     'Computer vision',
   ],
-  sameAs: [SITE.github],
+  sameAs: [SITE.github, SITE.linkedin],
 }
