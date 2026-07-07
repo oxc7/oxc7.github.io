@@ -24,7 +24,13 @@ export default function Layout({ children }: { children: ReactNode }) {
       <header className="masthead">
         <div className="masthead__inner">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
-            <span className="brand__mark">CYR</span>
+            <img
+              src="/resources/chen.png"
+              alt="Chen Yow Ru (Roy)"
+              className="brand__avatar"
+              width="36"
+              height="36"
+            />
             <span className="brand__name">Chen Yow Ru</span>
           </Link>
           <button

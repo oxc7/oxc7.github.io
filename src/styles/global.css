@@ -106,15 +106,13 @@ img {
 .brand:hover {
   color: var(--text);
 }
-.brand__mark {
-  font-family: var(--font-serif);
-  font-weight: 700;
-  font-size: 15px;
-  letter-spacing: 0.5px;
-  padding: 6px 9px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, var(--accent), #4b39c9);
-  color: #fff;
+.brand__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid var(--border);
+  flex: none;
 }
 .brand__name {
   font-weight: 600;
@@ -213,6 +211,15 @@ img {
   max-width: var(--maxw);
   margin: 0 auto;
   padding: 120px 24px 100px;
+}
+.hero__portrait {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid rgba(var(--accent-rgb), 0.45);
+  box-shadow: 0 10px 34px rgba(0, 0, 0, 0.45);
+  margin-bottom: 28px;
 }
 .hero__eyebrow {
   text-transform: uppercase;
