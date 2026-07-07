@@ -1,6 +1,5 @@
 import { Link } from '../router'
 import { SITE } from '../site'
-import ParticleHero from '../components/ParticleHero'
 import TiltCard from '../components/TiltCard'
 
 const PILLARS = [
@@ -28,7 +27,6 @@ export default function Home() {
   return (
     <>
       <section className="hero">
-        <ParticleHero />
         <div className="hero__content">
           <img
             src="/resources/chen.png"

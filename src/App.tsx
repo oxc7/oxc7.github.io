@@ -2,6 +2,7 @@ import { RouterProvider, useRouter } from './router'
 import { findRoute, NOT_FOUND } from './routes'
 import Layout from './components/Layout'
 import CursorGlow from './components/CursorGlow'
+import ParticleField from './components/ParticleField'
 
 function CurrentPage() {
   const { path } = useRouter()
@@ -12,6 +13,7 @@ function CurrentPage() {
 export default function App({ initialPath }: { initialPath: string }) {
   return (
     <RouterProvider initialPath={initialPath}>
+      <ParticleField />
       <CursorGlow />
       <Layout>
         <CurrentPage />
