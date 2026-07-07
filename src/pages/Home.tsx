@@ -40,14 +40,13 @@ export default function Home() {
           </p>
           <h1 className="hero__title">
             I lead <span className="grad">AI value creation</span> and technical
-            diligence for permanent-capital private equity.
+            due diligence across a permanent-capital private equity portfolio.
           </h1>
           <p className="hero__lede">
-            I&rsquo;m Chen Yow Ru (Roy), AI Lead at WAY Equity Partners, a
-            Japan-based private equity firm operating on a{' '}
-            <strong>permanent-capital</strong> basis. I drive AI value creation
-            across our portfolio and lead technical due diligence on the
-            businesses we buy.
+            I&rsquo;m Chen Yow Ru (Roy), AI Lead at WAY Equity Partners. I help
+            assess the technology behind businesses we acquire, then work with
+            portfolio companies to turn AI opportunities into practical,
+            measurable operating improvements.
           </p>
           <div className="hero__actions">
             <Link to="/projects/" className="btn btn--primary">
