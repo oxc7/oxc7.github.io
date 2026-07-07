@@ -43,7 +43,7 @@ export const ROUTES: RouteMeta[] = [
     path: '/projects/',
     title: 'Projects' + SEO_SUFFIX,
     description:
-      'Applied AI projects by Chen Yow Ru for investors and operators: an AI Value Creation Roadmap Generator for portfolio companies and an IP Risk Screening Tool for technical due diligence.',
+      'Applied AI projects by Chen Yow Ru for investors and operators: an AI Value Creation Roadmap Generator, SafeTracks (an award-winning platform-safety voice system), and an IP Risk Screening Tool for technical due diligence.',
     render: () => <Projects />,
   },
   {
