@@ -1,0 +1,33 @@
+name: Scheduled merge of PR 2 (blog post 2, 2026-07-22)
+
+on:
+  schedule:
+    # 2026-07-21 23:00 UTC = 2026-07-22 08:00 JST.
+    # Cron has no year field, so this fires every July 21; the job below
+    # is a no-op unless PR 2 is still open. Delete this file after the merge.
+    - cron: '0 23 21 7 *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  pages: write
+
+jobs:
+  merge:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Merge PR 2 if still open, then trigger Pages build
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          state=$(gh pr view 2 --repo "$GITHUB_REPOSITORY" --json state -q .state)
+          if [ "$state" != "OPEN" ]; then
+            echo "PR 2 is $state; nothing to do."
+            exit 0
+          fi
+          gh pr merge 2 --repo "$GITHUB_REPOSITORY" --merge
+          # Pushes made with GITHUB_TOKEN do not trigger the Pages
+          # build-and-deploy workflow, so request the build explicitly.
+          sleep 15
+          gh api "repos/$GITHUB_REPOSITORY/pages/builds" -X POST
