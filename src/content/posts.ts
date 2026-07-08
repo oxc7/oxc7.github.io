@@ -1,6 +1,7 @@
 import { marked } from 'marked'
 import pentestRaw from '../posts/pentest-ai-products.md?raw'
 import kaliRaw from '../posts/kali-linux-commands.md?raw'
+import diligenceRaw from '../posts/ai-technical-due-diligence.md?raw'
 
 export type Post = {
   slug: string
@@ -23,6 +24,13 @@ function build(
 }
 
 export const POSTS: Post[] = [
+  build(
+    'ai-technical-due-diligence',
+    'What I Actually Look at in AI Technical Due Diligence',
+    '2026-07-08',
+    'The framework I use to assess the technology behind an acquisition target, and how each finding translates into price, deal structure, or the value-creation plan.',
+    diligenceRaw,
+  ),
   build(
     'kali-linux-commands',
     'A Kali Linux Toolkit for Security Assessments in Technical Due Diligence',

@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16.png" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <meta name="theme-color" content="#0a0b12" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>What I Actually Look at in AI Technical Due Diligence | Chen Yow Ru (Roy)</title>
+    <meta name="description" content="The framework I use to assess the technology behind an acquisition target, and how each finding translates into price, deal structure, or the value-creation plan." />
+    <link rel="canonical" href="https://oxc7.github.io/blog/ai-technical-due-diligence/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="What I Actually Look at in AI Technical Due Diligence | Chen Yow Ru (Roy)" />
+    <meta property="og:description" content="The framework I use to assess the technology behind an acquisition target, and how each finding translates into price, deal structure, or the value-creation plan." />
+    <meta property="og:url" content="https://oxc7.github.io/blog/ai-technical-due-diligence/" />
+    <meta property="og:image" content="https://oxc7.github.io/resources/chen.png" />
+    <meta property="og:image:width" content="498" />
+    <meta property="og:image:height" content="436" />
+    <meta property="og:image:alt" content="Chen Yow Ru (Roy)" />
+    <meta property="og:site_name" content="Chen Yow Ru (Roy)" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="What I Actually Look at in AI Technical Due Diligence | Chen Yow Ru (Roy)" />
+    <meta name="twitter:description" content="The framework I use to assess the technology behind an acquisition target, and how each finding translates into price, deal structure, or the value-creation plan." />
+    <meta name="twitter:image" content="https://oxc7.github.io/resources/chen.png" />
+    <meta name="twitter:image:alt" content="Chen Yow Ru (Roy)" />
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Chen Yow Ru","alternateName":"Roy Chen","url":"https://oxc7.github.io","image":"https://oxc7.github.io/resources/chen.png","email":"mailto:royc09587@gmail.com","jobTitle":"AI Lead","worksFor":{"@type":"Organization","name":"WAY Equity Partners","url":"https://www.wayequity.co/","address":{"@type":"PostalAddress","addressCountry":"JP","addressLocality":"Tokyo"}},"workLocation":{"@type":"Place","address":{"@type":"PostalAddress","addressLocality":"Tokyo","addressCountry":"JP"}},"alumniOf":[{"@type":"CollegeOrUniversity","name":"The University of Tokyo"},{"@type":"CollegeOrUniversity","name":"Northwestern University"}],"knowsLanguage":["English","Japanese","Chinese","Taiwanese","Arabic"],"knowsAbout":["AI value creation in private equity","Technical due diligence","Machine learning","Natural language processing","Computer vision"],"sameAs":["https://github.com/oxc7","https://www.linkedin.com/in/ox7/"]}</script>
+    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BlogPosting","headline":"What I Actually Look at in AI Technical Due Diligence","description":"The framework I use to assess the technology behind an acquisition target, and how each finding translates into price, deal structure, or the value-creation plan.","datePublished":"2026-07-08","url":"https://oxc7.github.io/blog/ai-technical-due-diligence/","author":{"@type":"Person","name":"Chen Yow Ru"}}</script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-X4L1CK3J07"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-X4L1CK3J07');
+    </script>
+    <script type="module" crossorigin src="/assets/index-DWq3qV9R.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-Dp_0Xttt.css">
+  </head>
+  <body>
+    <div id="root"><canvas class="particle-field" aria-hidden="true"></canvas><div class="site"><header class="masthead"><div class="masthead__inner"><a href="/" class="brand"><img src="/resources/chen.png" alt="Chen Yow Ru (Roy)" class="brand__avatar" width="36" height="36"/><span class="brand__name">Chen Yow Ru</span></a><button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false"><span></span><span></span><span></span></button><nav class="nav "><a href="/" class="nav__link ">Home</a><a href="/resume/" class="nav__link ">Resume</a><a href="/projects/" class="nav__link ">Projects</a><a href="/patents/" class="nav__link ">Patents</a><a href="/blog/" class="nav__link nav__link--active">Blog</a></nav></div></header><main class="main"><article class="page post"><header class="page__header"><a href="/blog/" class="post__back">← All notes</a><h1 class="page__title">What I Actually Look at in AI Technical Due Diligence</h1><time class="post__date">July 8, 2026</time></header><div class="post__body prose"><p>When a target company ships AI, or claims to, the investment committee does not need to know whether the technology is impressive. It needs to know three things: what the technology is worth, what it will cost to own, and what it lets us do after close. Every item in my diligence framework exists to answer one of those three questions. A finding that answers none of them is trivia, and I cut it from the memo.</p>
+<p>Below is the framework I use, in the order I apply it. For each area I cover what I examine, the red flags I have learned to weight heavily, and the part most technical reviews skip: how the finding translates into deal terms.</p>
+<p>One scope note before starting. This framework is for targets that already ship AI or run models in production. Many of the businesses we look at, including most Japanese SMEs, have never used AI at all. That is a different exercise: discovering opportunities rather than auditing claims, and it deserves its own playbook, which I cover in a companion post.</p>
+<h2>1. Data assets: the thing that is actually durable</h2>
+<p>Models depreciate. Architectures get rewritten. The data a business generates through its own operations is usually the only technical asset with a decade-long life, so I start there.</p>
+<p><strong>What I examine.</strong> Provenance and rights first: can the company legally use, retain, and train on the data it holds, under its customer contracts and applicable privacy law? Then uniqueness: is this proprietary operational exhaust that only this business produces, or something a competitor could buy or scrape? Then the compounding test: does the dataset grow and improve as a byproduct of normal operations, or does it require paid effort to maintain? Finally, mundane quality checks that predict everything downstream: labeling consistency, coverage of edge cases, whether anyone can actually join the tables that matter.</p>
+<p><strong>Red flags.</strong> Training data scraped or purchased with unclear rights. Customer contracts silent on data usage. A &quot;proprietary dataset&quot; that turns out to be a public source with a schema on top. Data locked in per-customer silos that cannot legally be pooled.</p>
+<p><strong>Deal translation.</strong> This is where the upside case lives, not just the risk case. A data asset that makes revenue predictable, for example ten years of transaction history showing that most of next year&#39;s revenue is effectively recurring, is an argument lenders understand, and it can support more leverage than the industry-standard assumption. In the other direction, unclear data rights become representations, warranties, and escrow in the purchase agreement, because the liability surfaces after close.</p>
+<h2>2. Model quality versus demo quality</h2>
+<p>Every CIM demo works. The question is whether the system works on the traffic it will actually see, and whether anyone at the company can prove it.</p>
+<p><strong>What I examine.</strong> I ask for the evaluation harness before I ask for the accuracy number. A team with held-out test sets, meaningful baselines, and monitoring for drift in production is telling me the number is real. A team that quotes accuracy without a denominator is telling me the opposite. I also establish what the &quot;AI&quot; actually is. A thin orchestration layer over a foundation-model API is a perfectly good product choice, but it is a different asset, with a different moat and different margin structure, than the proprietary model the deck describes.</p>
+<p><strong>Red flags.</strong> Metrics with no test-set definition. No monitoring, so nobody knows if the model has degraded since launch. Offline metrics that have never been reconciled against a business outcome. A demo environment that differs meaningfully from production.</p>
+<p><strong>Deal translation.</strong> If the CIM&#39;s moat claim rests on the model and the model is a replaceable wrapper, the strategic premium in the price does not hold, and the valuation conversation changes. If the model is real but unmeasured, that is not a discount, it is a value-creation item: instrumenting it is cheap and usually week-one work on the post-close roadmap.</p>
+<h2>3. Architecture and the true cost of scaling</h2>
+<p>The value-creation thesis usually assumes the business gets bigger. I want to know what the technology bill for that growth looks like, because it belongs in the model as a number, not in the memo as an adjective.</p>
+<p><strong>What I examine.</strong> Unit economics of inference: what one prediction, document, or conversation costs to serve today, and what gross margin looks like at five or ten times the volume. Architectural debt: the systems that work at current scale but need rebuilding to grow, and the realistic cost and timeline of that rebuild. Operational maturity: deployment practices, incident history, whether the infrastructure is reproducible or held together by one engineer&#39;s shell scripts.</p>
+<p><strong>Red flags.</strong> Serving costs that scale linearly with revenue in a business priced for software margins. A core system the team openly describes as untouchable. Cloud spend growing faster than usage.</p>
+<p><strong>Deal translation.</strong> A required rebuild is capex the seller&#39;s projections do not include. Quantified, it goes into the model directly or comes off the price in negotiation. Serving costs that erode gross margin at scale attack the exit multiple assumption, which is a larger number than most technical reviewers realize they are holding.</p>
+<h2>4. Team and key-person risk</h2>
+<p>An AI system nobody at the company can maintain is a depreciating asset with a hidden replacement cost.</p>
+<p><strong>What I examine.</strong> Who built the core models and who can modify them today, which are often different people by the time a company sells. The bus factor on each critical system. Whether knowledge lives in documentation and code review or in two heads. How dependent the roadmap is on people who may not stay through a change of control.</p>
+<p><strong>Red flags.</strong> A single irreplaceable ML engineer, especially one with no equity in the outcome. Contractors who built the core system and have left. A team whose skills match the demo but not the roadmap.</p>
+<p><strong>Deal translation.</strong> Key-person risk is a structuring input more than a pricing input: retention packages, earnouts tied to system continuity, and in extreme cases closing conditions. It also sets the integration plan, because the first ninety days look very different when the goal includes de-risking a bus factor of one.</p>
+<h2>5. Security and compliance posture</h2>
+<p>I have written separately about <a href="/blog/pentest-ai-products/">penetration testing AI products</a> and the <a href="/blog/kali-linux-commands/">assessment toolkit</a> I use, so I will keep this section short. The diligence point is that a vulnerable AI product is a liability that surfaces after close, when it is ours.</p>
+<p><strong>What I examine.</strong> Classic application security, which most AI startups have underinvested in, plus the AI-specific surface: prompt injection paths to data the model can reach, training-data leakage, and abuse of expensive inference endpoints. On compliance, whether data handling actually matches privacy law in the operating jurisdictions and what obligations attach to the model outputs.</p>
+<p><strong>Deal translation.</strong> Remediation is a quantifiable cost that belongs in the model. Breach exposure and regulatory gaps belong in indemnities. Neither should be discovered by the incident that makes them expensive.</p>
+<h2>6. Dependency and vendor risk</h2>
+<p>Modern AI products are assembled, and the assembly has landlords.</p>
+<p><strong>What I examine.</strong> Concentration on a single foundation-model provider and what happens to margin if that provider reprices. License terms on the open-weight models and datasets in the stack, some of which restrict exactly the commercial use the company depends on. Contractual exposure hiding in API terms of service.</p>
+<p><strong>Deal translation.</strong> Provider concentration is a margin-sensitivity scenario the model should carry. A license violation in the core product is a remediation cost and occasionally a genuine deal issue.</p>
+<h2>From findings to deal terms</h2>
+<p>The discipline that holds the framework together is simple: every finding must end in one of three places.</p>
+<ol>
+<li><strong>The price</strong>, as an adjustment supported by a number.</li>
+<li><strong>The structure</strong>, as an escrow, indemnity, earnout, retention package, or closing condition.</li>
+<li><strong>The plan</strong>, as a line item in the first ninety days of the value-creation roadmap, with an owner and a cost.</li>
+</ol>
+<p>A finding that ends nowhere is an observation, and observations do not belong in an IC memo. This rule also keeps the work honest in the positive direction. Diligence is not only a search for reasons to pay less; the data asset that supports more leverage and the unmeasured model that becomes a quick win are findings too, and they are often what makes the deal.</p>
+<p>That is also why I treat diligence and value creation as one continuous exercise rather than two departments. The map I build assessing a target, of its data, its systems, its people, and its risks, is the first draft of the plan I will be executing with that company after close. The best diligence output is not a risk register. It is a roadmap with prices on it.</p>
+</div></article></main><footer class="footer"><div class="footer__inner"><p>Chen Yow Ru (Roy)<!-- --> · <!-- -->AI Lead<!-- --> at<!-- --> <a href="https://www.wayequity.co/" target="_blank" rel="noopener noreferrer">WAY Equity Partners</a></p><div class="footer__links"><a href="mailto:royc09587@gmail.com">Email</a><a href="https://www.linkedin.com/in/ox7/" target="_blank" rel="noopener noreferrer">LinkedIn</a><a href="https://github.com/oxc7" target="_blank" rel="noopener noreferrer">GitHub</a><a href="https://www.wayequity.co/" target="_blank" rel="noopener noreferrer">WAY Equity</a></div><p class="footer__fine">© <!-- -->2026<!-- --> Chen Yow Ru. Tokyo, Japan.</p></div></footer></div></div>
+  </body>
+</html>
