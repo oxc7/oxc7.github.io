@@ -76,6 +76,13 @@ export default function Layout({ children }: { children: ReactNode }) {
             <a href={SITE.github} target="_blank" rel="noopener noreferrer">
               GitHub
             </a>
+            <a
+              href="https://buttondown.com/oxc7"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Newsletter
+            </a>
             <a href={SITE.firmUrl} target="_blank" rel="noopener noreferrer">
               WAY Equity
             </a>
