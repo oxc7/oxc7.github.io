@@ -13,6 +13,8 @@ export const SITE = {
   awsCert:
     'https://www.credly.com/badges/e2a0599b-503a-46b6-9440-7dfb5fc53215/linked_in_profile',
   patentUrl: 'https://ipforce.jp/patent-jp-P_B1-7471760',
+  // Buttondown embed endpoint; the trailing segment is the Buttondown username.
+  newsletterAction: 'https://buttondown.com/api/emails/embed-subscribe/oxc7',
 }
 
 export const PERSON_JSON_LD = {

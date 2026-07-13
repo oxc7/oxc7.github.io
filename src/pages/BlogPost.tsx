@@ -1,5 +1,6 @@
 import { Link } from '../router'
 import { getPost, formatDate } from '../content/posts'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 export default function BlogPost({ slug }: { slug: string }) {
   const post = getPost(slug)
@@ -27,6 +28,7 @@ export default function BlogPost({ slug }: { slug: string }) {
         className="post__body prose"
         dangerouslySetInnerHTML={{ __html: post.html }}
       />
+      <NewsletterSignup />
     </article>
   )
 }
