@@ -1,6 +1,7 @@
 import { Link } from '../router'
 import { POSTS, formatDate } from '../content/posts'
 import TiltCard from '../components/TiltCard'
+import NewsletterSignup from '../components/NewsletterSignup'
 
 export default function Blog() {
   return (
@@ -25,6 +26,8 @@ export default function Blog() {
           </TiltCard>
         ))}
       </div>
+
+      <NewsletterSignup />
     </div>
   )
 }
