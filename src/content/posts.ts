@@ -2,6 +2,7 @@ import { marked } from 'marked'
 import pentestRaw from '../posts/pentest-ai-products.md?raw'
 import kaliRaw from '../posts/kali-linux-commands.md?raw'
 import diligenceRaw from '../posts/ai-technical-due-diligence.md?raw'
+import noAiRaw from '../posts/ai-opportunities-no-ai-companies.md?raw'
 
 export type Post = {
   slug: string
@@ -24,6 +25,13 @@ function build(
 }
 
 export const POSTS: Post[] = [
+  build(
+    'ai-opportunities-no-ai-companies',
+    'Finding AI Opportunities in Companies That Have Never Used AI',
+    '2026-07-22',
+    'How I find improvements in businesses with no AI exposure: trace the work, assess through an AI and a without-AI lens, and decide the roadmap jointly with management.',
+    noAiRaw,
+  ),
   build(
     'ai-technical-due-diligence',
     'What I Actually Look at in AI Technical Due Diligence',
