@@ -2,7 +2,7 @@ When a target company ships AI, or claims to, the investment committee does not 
 
 Below is the framework I use, in the order I apply it. For each area I cover what I examine, the red flags I have learned to weight heavily, and the part most technical reviews skip: how the finding translates into deal terms.
 
-One scope note before starting. This framework is for targets that already ship AI or run models in production. Many of the businesses we look at, including most Japanese SMEs, have never used AI at all. That is a different exercise: discovering opportunities rather than auditing claims, and it deserves its own playbook, which I cover in a companion post.
+One scope note before starting. This framework is for targets that already ship AI or run models in production. Many of the businesses we look at, including most Japanese SMEs, have never used AI at all. That is a different exercise: discovering opportunities rather than auditing claims, and it deserves its own playbook, which I cover in a companion post, [Finding AI Opportunities in Companies That Have Never Used AI](/blog/ai-opportunities-no-ai-companies/).
 
 ## 1. Data assets: the thing that is actually durable
 
