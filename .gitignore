@@ -5,6 +5,9 @@ node_modules
 dist
 dist-server
 
+# Documents — the resume lives outside the repo, not in it
+*.docx
+
 # Logs
 npm-debug.log*
 yarn-debug.log*

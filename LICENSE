@@ -1,21 +1,21 @@
-The MIT License (MIT)
+Copyright (c) 2026 Chen Yow Ru (Roy). All rights reserved.
 
-Copyright (c) 2013-2024 Michael Rose and contributors
+This repository is NOT open source. It is published publicly only so that
+GitHub Pages can serve https://oxc7.github.io/.
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+No permission is granted to any person to copy, modify, merge, publish,
+distribute, sublicense, mirror, republish, or create derivative works from
+any part of this repository, in whole or in part — whether the source code,
+the site design, the written content, the resume, or the images and
+likeness contained herein.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Viewing the source in a browser, and the forking permitted by GitHub's Terms
+of Service, are the only uses contemplated. Neither grants any further
+license, and forks may not be republished, redeployed, or presented as your
+own work.
+
+If you would like to use something here, please ask first: [removed]
 
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
