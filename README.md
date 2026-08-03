@@ -74,6 +74,5 @@ This repository is public so that GitHub Pages can serve the site — it is **no
 
 ## Contact
 
-- Email: [removed]
 - LinkedIn: https://www.linkedin.com/in/ox7/
 - GitHub: https://github.com/oxc7
