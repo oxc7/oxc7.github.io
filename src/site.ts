@@ -16,7 +16,7 @@ export const SITE = {
   newsletterAction: 'https://buttondown.com/api/emails/embed-subscribe/oxc7',
   // Formspree endpoint for the contact form; replace FORM_ID after creating
   // the form at formspree.io (messages forward to email without exposing it).
-  contactFormAction: 'https://formspree.io/f/FORM_ID',
+  contactFormAction: 'https://formspree.io/f/xrpebqqk',
 }
 
 export const PERSON_JSON_LD = {
