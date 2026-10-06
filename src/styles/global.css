@@ -968,6 +968,29 @@ a.cred .cred__label {
   cursor: pointer;
   font: inherit;
 }
+.form-msg {
+  margin: 0;
+  font-size: 0.95rem;
+  max-width: 48ch;
+}
+.form-msg--warn {
+  color: #ffb86c;
+}
+.form-msg--error {
+  color: #ff8585;
+}
+.form-msg--error a {
+  color: inherit;
+  text-decoration: underline;
+}
+.contact-form .btn:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+.contact-thanks {
+  font-size: 1.15rem;
+  color: var(--text);
+}
 .contact-alt {
   margin: 2rem 0 0;
   color: var(--text-dim);
