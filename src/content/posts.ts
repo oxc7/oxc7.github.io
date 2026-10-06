@@ -3,6 +3,7 @@ import pentestRaw from '../posts/pentest-ai-products.md?raw'
 import kaliRaw from '../posts/kali-linux-commands.md?raw'
 import diligenceRaw from '../posts/ai-technical-due-diligence.md?raw'
 import noAiRaw from '../posts/ai-opportunities-no-ai-companies.md?raw'
+import successionRaw from '../posts/succession-handover-window.md?raw'
 
 export type Post = {
   slug: string
@@ -25,6 +26,13 @@ function build(
 }
 
 export const POSTS: Post[] = [
+  build(
+    'succession-handover-window',
+    'The Handover Window: Where AI Fits in Japan’s Succession Deals',
+    '2026-10-14',
+    'In a succession deal the most perishable asset is the owner’s judgment. Why capturing it during the transition period comes before automating anything.',
+    successionRaw,
+  ),
   build(
     'ai-opportunities-no-ai-companies',
     'Finding AI Opportunities in Companies That Have Never Used AI',
