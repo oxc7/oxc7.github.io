@@ -1,5 +1,6 @@
 import { SITE } from '../site'
 import TiltCard from '../components/TiltCard'
+import { Link } from '../router'
 
 const TIMELINE = [
   {
@@ -117,6 +118,9 @@ export default function Resume() {
           >
             LinkedIn
           </a>
+          <Link to="/contact/" className="btn btn--ghost">
+            Contact
+          </Link>
         </div>
       </header>
 

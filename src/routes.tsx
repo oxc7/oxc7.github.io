@@ -5,6 +5,7 @@ import Projects from './pages/Projects'
 import Patents from './pages/Patents'
 import Blog from './pages/Blog'
 import BlogPost from './pages/BlogPost'
+import Contact from './pages/Contact'
 import NotFound from './pages/NotFound'
 import { POSTS } from './content/posts'
 import { SITE } from './site'
@@ -52,6 +53,13 @@ export const ROUTES: RouteMeta[] = [
     description:
       'Granted patents by Chen Yow Ru, including Japan Patent No. 7471760, "Prospective Client List Generation."',
     render: () => <Patents />,
+  },
+  {
+    path: '/contact/',
+    title: 'Contact' + SEO_SUFFIX,
+    description:
+      'Get in touch with Chen Yow Ru (Roy) about deals, AI due diligence, speaking, or writing.',
+    render: () => <Contact />,
   },
   {
     path: '/blog/',

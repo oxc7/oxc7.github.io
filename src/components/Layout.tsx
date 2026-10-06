@@ -8,6 +8,7 @@ const NAV = [
   { to: '/projects/', label: 'Projects' },
   { to: '/patents/', label: 'Patents' },
   { to: '/blog/', label: 'Blog' },
+  { to: '/contact/', label: 'Contact' },
 ]
 
 function isActive(current: string, to: string): boolean {
@@ -69,7 +70,7 @@ export default function Layout({ children }: { children: ReactNode }) {
             </a>
           </p>
           <div className="footer__links">
-            <a href={`mailto:${SITE.email}`}>Email</a>
+            <Link to="/contact/">Contact</Link>
             <a href={SITE.linkedin} target="_blank" rel="noopener noreferrer">
               LinkedIn
             </a>

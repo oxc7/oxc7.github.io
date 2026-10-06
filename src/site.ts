@@ -4,7 +4,6 @@ export const SITE = {
   jobTitle: 'AI Lead',
   firm: 'WAY Equity Partners',
   firmUrl: 'https://www.wayequity.co/',
-  email: '[removed]',
   github: 'https://github.com/oxc7',
   linkedin: 'https://www.linkedin.com/in/ox7/',
   ogImage: '/resources/chen.png',
@@ -15,6 +14,9 @@ export const SITE = {
   patentUrl: 'https://ipforce.jp/patent-jp-P_B1-7471760',
   // Buttondown embed endpoint; the trailing segment is the Buttondown username.
   newsletterAction: 'https://buttondown.com/api/emails/embed-subscribe/oxc7',
+  // Formspree endpoint for the contact form; replace FORM_ID after creating
+  // the form at formspree.io (messages forward to email without exposing it).
+  contactFormAction: 'https://formspree.io/f/FORM_ID',
 }
 
 export const PERSON_JSON_LD = {
@@ -24,7 +26,6 @@ export const PERSON_JSON_LD = {
   alternateName: 'Roy Chen',
   url: SITE.url,
   image: `${SITE.url}${SITE.ogImage}`,
-  email: `mailto:${SITE.email}`,
   jobTitle: 'AI Lead',
   worksFor: {
     '@type': 'Organization',

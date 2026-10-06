@@ -916,6 +916,64 @@ a.cred .cred__label {
   font: inherit;
 }
 
+/* Contact form */
+.contact-form {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+.contact-form__row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+}
+.contact-form__label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+}
+.contact-form__input {
+  padding: 0.7rem 1rem;
+  font: inherit;
+  color: var(--text);
+  background: var(--bg-2);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+}
+.contact-form__input::placeholder {
+  color: var(--text-faint);
+}
+.contact-form__input:focus-visible {
+  outline: none;
+  border-color: rgba(var(--accent-rgb), 0.7);
+  box-shadow: 0 0 0 3px rgba(var(--accent-rgb), 0.25);
+}
+.contact-form__textarea {
+  resize: vertical;
+  min-height: 140px;
+}
+.contact-form__gotcha {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+.contact-form .btn {
+  align-self: flex-start;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+.contact-alt {
+  margin: 2rem 0 0;
+  color: var(--text-dim);
+  font-size: 0.95rem;
+}
+
 .sr-only {
   position: absolute;
   width: 1px;
