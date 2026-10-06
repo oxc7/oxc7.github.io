@@ -2,6 +2,7 @@ import { useState, type FormEvent } from 'react'
 import { SITE } from '../site'
 
 const MIN_WORDS = 20
+const MAX_WORDS = 350
 
 function countWords(text: string): number {
   return text.trim().split(/\s+/).filter(Boolean).length
@@ -12,6 +13,7 @@ export default function Contact() {
     'idle',
   )
   const [warning, setWarning] = useState('')
+  const [msgWords, setMsgWords] = useState(0)
 
   async function handleSubmit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -22,6 +24,12 @@ export default function Contact() {
     if (words < MIN_WORDS) {
       setWarning(
         `Please write at least ${MIN_WORDS} words so I have enough context to reply well (currently ${words}).`,
+      )
+      return
+    }
+    if (words > MAX_WORDS) {
+      setWarning(
+        `Please keep your message under ${MAX_WORDS} words (currently ${words}).`,
       )
       return
     }
@@ -108,7 +116,14 @@ export default function Contact() {
             rows={7}
             placeholder={`At least ${MIN_WORDS} words. Context helps me reply well.`}
             className="contact-form__input contact-form__textarea"
+            onChange={(e) => setMsgWords(countWords(e.target.value))}
           />
+          <p className="contact-form__count" aria-hidden="true">
+            {msgWords} / {MAX_WORDS} words
+            {msgWords > 0 && msgWords < MIN_WORDS
+              ? ` (minimum ${MIN_WORDS})`
+              : ''}
+          </p>
         </div>
 
         {/* Honeypot: hidden from humans, bots that fill it are dropped. */}

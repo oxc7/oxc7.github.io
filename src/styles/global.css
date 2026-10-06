@@ -968,6 +968,13 @@ a.cred .cred__label {
   cursor: pointer;
   font: inherit;
 }
+.contact-form__count {
+  margin: 0;
+  align-self: flex-end;
+  font-size: 0.78rem;
+  color: var(--text-faint);
+  font-variant-numeric: tabular-nums;
+}
 .form-msg {
   margin: 0;
   font-size: 0.95rem;
