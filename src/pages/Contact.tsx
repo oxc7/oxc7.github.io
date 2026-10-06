@@ -47,7 +47,9 @@ export default function Contact() {
         <header className="page__header">
           <h1 className="page__title">Contact</h1>
         </header>
-        <p className="contact-thanks">Thanks for submitting.</p>
+        <p className="contact-thanks" role="status">
+          Thanks for submitting.
+        </p>
       </div>
     )
   }
@@ -72,6 +74,7 @@ export default function Contact() {
             type="text"
             name="name"
             required
+            maxLength={80}
             autoComplete="name"
             className="contact-form__input"
           />
@@ -86,6 +89,7 @@ export default function Contact() {
             type="email"
             name="email"
             required
+            maxLength={254}
             autoComplete="email"
             placeholder="So I can reply"
             className="contact-form__input"
@@ -100,6 +104,7 @@ export default function Contact() {
             id="contact-message"
             name="message"
             required
+            maxLength={4000}
             rows={7}
             placeholder={`At least ${MIN_WORDS} words. Context helps me reply well.`}
             className="contact-form__input contact-form__textarea"
